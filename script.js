@@ -1,37 +1,39 @@
 var whichChange = 0
 var xArr = []
 var oArr = []
-var x, o;
+var x, o, winCount;
 var change;
 var winCombos = [[1,4,7],[2,5,8],[3,6,9],[1,2,3],[4,5,6],[7,8,9],[1,5,9],[3,5,7]]
 
-function isWin(numbers){
-  for(var j = 0; j <  winCombos.length; j++){
-    for(var i = 0; i < winCombos[i].length; i++){
+function isWin(playerNumbers){
+  for(var j = 0; j < winCombos.length; j++){
+    winCount = 0;
+    for(var i = 0; i < winCombos[j].length; i++){
       console.log(winCombos[j][i]);
-       if($.inArray(numbers, winCombos[i]) == -1){
-         console.log("no win");
-         console.log(oArr);
-         return false;
-       }
+      if($.inArray(winCombos[j][i], playerNumbers) !== -1){
+        winCount++
+        if(winCount === 3) {
+          console.log('haystack');
+          console.log(oArr);
+          console.log("win!!!");
+          return true;
+        }
+      }
     }
   }
-  console.log(haystack);
+  console.log("no win");
   console.log(oArr);
-  console.log("win!!!");
-  return true;
+  console.log(xArr);
+  return false;
 }
 
 $(document).ready(function(){
   $('img').add('h1').hover(function(){
-    $(this).addClass('highlight')
-  },
-  function(){
-    $(this).removeClass('highlight')
+    $(this).toggleClass('highlight')
   })
 
-  $('resetButton').click(function(){
-    window.reload(true)
+  $('#resetButton').click(function(){
+    location.reload()
   })
   $('h1').click(function(){
     $('h1').effect('shake', {times: 3}, 1000)
@@ -45,13 +47,14 @@ $(document).ready(function(){
             change = "images/odog.jpg"
             o = $(this).attr("value")
             oArr.push(Number(o))
-            isWin(winCombos, oArr)
+            isWin(oArr)
             whichChange++
       } else {
         change = "images/xcat.gif"
         // xArr.push($(this).val)
         x = $(this).attr("value")
-        xArr.push(x)
+        xArr.push(Number(x))
+        isWin(xArr)
         whichChange++
       }
       $(this).fadeOut(400, function(){
