@@ -1,6 +1,6 @@
 /*debgging*/
-
-/**{
+/*
+*{
   border: 1px solid white;
 }*/
 
@@ -20,13 +20,32 @@ body{
 .row{
   margin-bottom: 1vw !important;
 }
+.container{
+  position: absolute;
+  margin-top: 20px !important;
+}
+/*.col-md-3, .col-md-1 {
+  margin-top: 20px !important;
+}*/
+.col-md-1{
+  margin-left: 1vw !important;
+}
 .win{
   background-image: url("image/win.gif");
+}
+.canvas{
+  top:0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
 }
 img {
   width:70%;
   margin: 0 auto;
   border: 2px white solid;
+  z-index: 1;
+
 }
 
 h1{
