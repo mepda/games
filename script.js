@@ -23,8 +23,18 @@ function isWin(numbers){
 }
 
 $(document).ready(function(){
+  $('img').add('h1').hover(function(){
+    $(this).addClass('highlight')
+  },
+  function(){
+    $(this).removeClass('highlight')
+  })
+
+  $('resetButton').click(function(){
+    window.reload(true)
+  })
   $('h1').click(function(){
-    $('body').addClass('win')
+    $('h1').effect('shake', {times: 3}, 1000)
   })
   $('img').click(function(){
     if($(this).attr('locked') == "false"){

@@ -1,6 +1,5 @@
 /*debgging*/
-/*
-*{
+/**{
   border: 1px solid white;
 }*/
 
@@ -17,6 +16,12 @@ body{
     left: 0;
     background: -webkit-radial-gradient(top center, ellipse cover, rgba(34,255,255,0.2) 0%,rgba(10,110,0,0.5) 100%);
 }*/
+
+.highlight{
+  -webkit-box-shadow: 2px 1px 73px 9px rgba(207,255,251,0.78);
+  -moz-box-shadow: 2px 1px 73px 9px rgba(207,255,251,0.78);
+  box-shadow: 2px 1px 73px 9px rgba(207,255,251,0.78);
+}
 .row{
   margin-bottom: 1vw !important;
 }
@@ -29,6 +34,7 @@ body{
 }*/
 .col-md-1{
   margin-left: 1vw !important;
+  margin-right: 7vw !important;
 }
 .win{
   background-image: url("image/win.gif");
