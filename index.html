@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="script.js"></script>
+  <script src="confetti.js"></script>
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <h1 class="text-center">Tic Tac Toe</h1>
+  <button id="startButton"class="btn btn-primary">Win</button>
+  <button id="stopButton" class="btn btn-danger">Lose</button>
+  <canvas id="canvas"></canvas>
+  <div class="container text-center">
+    <div class="row text-center">
+      <!-- For the direction classes, I'm saying where I want them to pull
+    not their position on the screen -->
+      <div class="col-md-1"></div>
+      <div class="col-md-3 text-right board"><img locked="false" value="1" src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-center center"><img locked="false" value="2" src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-left left"><img locked="false" value="3" src="images/cat.jpg"/></div>
+    </div><br/>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3 text-right board"><img locked="false" value="4"src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-center center"><img locked="false" value="5"src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-left left"><img locked="false" value="6"src="images/cat.jpg"/></div>
+    </div><br/>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3 text-right board"><img locked="false" value="7" src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-center center"><img locked="false" value="8"src="images/cat.jpg"/></div>
+      <div class="col-md-3 text-left left"><img locked="false" value="9" src="images/cat.jpg"/></div>
+    </div>
+  </div>
+</body>
+</html>
