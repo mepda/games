@@ -25,6 +25,8 @@ function isWin(player) {
                     console.log("players squares: " + players[0]);
                     console.log("computers squares: " + players[1]);
                     window.alert("Win for player " + player + "!")
+                    canYouSeeMe()
+                    RestartConfetti()
                     return true;
                 }
             }
@@ -72,9 +74,9 @@ function takeMiddleOrCorner() {
 
 function claimSquare(turn, squareNumber) {
     players[turn].push(Number(squareNumber))
-    isWin(turn)
     changeAndFade($("div").find("[value='" + squareNumber + "']"), turn)
     $("div").find("[value='" + squareNumber + "']").attr('locked', 'true')
+    isWin(turn)
     turnCounter++
 }
 
@@ -110,6 +112,9 @@ function changeAndFade(square, player) {
 }
 
 $(document).ready(function () {
+
+  console.log("confetis", window.requestAnimFrame);
+
     $('img').add('h1').hover(function () {
         $(this).toggleClass('highlight')
     })
