@@ -25,8 +25,6 @@ function isWin(player) {
                     console.log("players squares: " + players[0]);
                     console.log("computers squares: " + players[1]);
                     window.alert("Win for player " + player + "!")
-                    canYouSeeMe()
-                    RestartConfetti()
                     return true;
                 }
             }
@@ -133,7 +131,7 @@ $(document).ready(function () {
                 claimSquare(playersTurn, chosenSquare)
             }
             changeAndFade($(this))
-            computersTurn(turnCounter % 2)
+            setTimeout(function(){computersTurn(turnCounter % 2)}, 1000)
 
         }
     })
